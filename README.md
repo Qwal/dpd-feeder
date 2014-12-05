@@ -1,7 +1,7 @@
 dpd-feeder
 ==========
 
-Feed your deployd resources from JSON.
+Feed your [deployd](http://deployd.com/) resources from JSON.
 
 ## Installation
 
