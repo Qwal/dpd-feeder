@@ -1,0 +1,57 @@
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+
+<div class="well hide" id="basic-dashboard" style="display: block;" ng-app="dpdFeeder">
+    <div ng-controller="SettingsCtrl">
+        <h3>Import Settings</h3>
+        <form class="form-horizontal" id="settings-form" ng-submit="submit()" ng-hide="success">
+            <div class="control-group">
+                <label class="control-label code" for="prop-json">JSON</label>
+                <div class="controls">
+
+                    <div class="editor">
+                        <div id="prop-json" ng-model="jsonData"></div>
+                    </div>
+
+                    <p class="help-block">JSON data</p>
+
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label code" for="prop-resource">resource name</label>
+                <div class="controls">
+
+                    <input type="text" class="input-xlarge" id="prop-resource" ng-model="resource">
+
+                    <p class="help-block">Name of dpd resource to fill with data.</p>
+
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label code" for="prop-clear">clear</label>
+                <div class="controls">
+
+                    <input type="checkbox" class="input-xlarge" id="prop-clear" ng-model="clear">
+
+                    <p class="help-block">If checked will clear resource data before importing.</p>
+
+                </div>
+            </div>
+
+            <div class="form-actions" id="save-button-container">
+                <button class="btn btn-success" id="save-button"><i class="icon-white icon-download"></i> Start Import</button>
+                <button class="btn" type="button" id="cancel-button" ng-click="clearForm()"><i class="icon-remove"></i> Clear</button>
+            </div>
+        </form>
+
+        <div class="alert alert-danger ng-hide" ng-show="error != ''">
+            {{error}}
+        </div>
+
+        <div class="alert alert-success ng-hide" ng-show="success">
+            Data successfully loaded!
+        </div>
+    </div>
+
+</div>
