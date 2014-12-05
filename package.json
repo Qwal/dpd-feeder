@@ -12,6 +12,11 @@
     "type": "git",
     "url": "git://github.com/Qwal/dpd-feeder.git"
   },
+  "keywords": [
+    "deployd",
+    "dpd",
+    "json"
+  ],
   "author": "Damian Kowalski",
   "licenses": [
 	  {
