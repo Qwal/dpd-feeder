@@ -1,6 +1,6 @@
 {
   "name": "dpd-feeder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "import json into your deployd resources",
   "main": "index.js",
   "dependencies": {},
